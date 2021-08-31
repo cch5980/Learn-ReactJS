@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Responsive from './Responsive';
 import Button from './Button';
 import { Link } from 'react-router-dom';
-import user from '../../modules/user';
 
 const HeaderBlock = styled.div`
   position: fixed;
@@ -44,7 +43,7 @@ const UserInfo = styled.div`
   margin-right: 1rem;
 `;
 
-const Header = ({ user }) => {
+const Header = ({ user, onLogout }) => {
   return (
     <>
       <HeaderBlock>
@@ -55,7 +54,7 @@ const Header = ({ user }) => {
           {user ? (
             <div className="right">
               <UserInfo>{user.username}</UserInfo>
-              <Button>로그아웃</Button>
+              <Button onClick={onLogout}>로그아웃</Button>
             </div>
           ) : (
             <div className="right">
