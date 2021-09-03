@@ -46,6 +46,7 @@ const StyledLink = styled(Link)`
 `;
 
 const Button = (props) => {
+  console.log('button props:', props);
   return props.to ? (
     <StyledLink {...props} cyan={props.cyan ? 1 : 0} />
   ) : (

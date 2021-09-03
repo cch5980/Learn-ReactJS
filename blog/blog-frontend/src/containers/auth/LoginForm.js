@@ -34,9 +34,10 @@ const LoginForm = ({ history }) => {
   };
 
   // 컴포넌트가 처음 렌더링될 때 form을 초기화함
+  // mount되고 나서 실행 + 값이 바뀔 떄 실행
   useEffect(() => {
     dispatch(initializeForm('login'));
-  }, [dispatch]);
+  }, []);
 
   useEffect(() => {
     if (authError) {
