@@ -1,13 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Say from './Say';
 
-function App() {
-  const name = undefined
-  return (
-    <div>
-      {name || 'react'}
-    </div>
-  );
+const App = () => {
+  return <Say />
 }
+
+// function App() {
+//   const name = undefined
+//   return (
+//     <div>
+//       {name || 'react'}
+//     </div>
+//   );
+// }
 
 export default App;
