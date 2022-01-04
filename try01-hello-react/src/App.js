@@ -1,9 +1,14 @@
 import React from 'react'
 import Say from './Say';
+import EventPractice from './EventPractice'
 
 const App = () => {
-  return <Say />
+  return <EventPractice />
 }
+
+// const App = () => {
+//   return <Say />
+// }
 
 // function App() {
 //   const name = undefined
