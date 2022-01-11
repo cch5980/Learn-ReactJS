@@ -2,6 +2,8 @@ import React, { useCallback, useState } from 'react'
 import axios from 'axios'
 import NewsList from './components/NewsList'
 import Categories from './components/Categories'
+import { Route } from 'react-router-dom'
+import NewsPage from './pages/NewsPage'
 
 const App = () => {
   const [data, setData] = useState(null)
@@ -25,14 +27,11 @@ const App = () => {
   }
 
   return (
-    <div>
-      {/* <div>
-        <button onClick={handleClick}>불러오기</button>
-      </div>
-      {data && <textarea rows={7} value={JSON.stringify(data, null, 2)} readOnly={true} /> } */}
-      <Categories category={category} onSelect={onSelect} />
-      <NewsList category={category} />
-    </div>
+    // <div>
+    //   <Categories category={category} onSelect={onSelect} />
+    //   <NewsList category={category} />
+    // </div>
+    <Route path='/:category?' component={NewsPage} />  
   )
 }
 
